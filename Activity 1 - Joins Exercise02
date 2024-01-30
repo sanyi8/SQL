@@ -1,0 +1,15 @@
+SELECT
+
+loc.location_id
+, loc.postal_code
+, ctrs.country_id
+, ctrs.country_name
+
+FROM
+
+locations loc
+INNER JOIN departments dep ON dep.location_id = loc.location_id
+INNER JOIN countries ctrs ON ctrs.country_id = loc.country_id
+
+ORDER BY
+loc.location_id;

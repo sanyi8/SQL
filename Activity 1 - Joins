@@ -1,0 +1,19 @@
+SELECT
+
+emp.first_name                         -- selecting required columns / data and keys
+, emp.last_name
+, emp.manager_id
+, dep.department_id
+, loc.location_id
+FROM
+employees emp                               --this will be the left table to join to
+
+
+LEFT JOIN departments dep              -- connect data based on the employees table with the dep table.
+ON
+emp.employee_id = dep.employee_id       --connecting the actual tables with same attributes/keys
+
+
+LEFT JOIN locations loc                -- same with locations table
+ON
+emp.department_id = loc.department_id;

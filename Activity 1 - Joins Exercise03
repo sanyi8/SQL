@@ -1,0 +1,12 @@
+SELECT
+emp.employee_id
+, emp.first_name
+, emp.last_name
+, dep.dependent_id
+, dep.first_name
+, dep.last_name
+, dep.relationship
+FROM
+employees emp
+INNER JOIN
+dependents dep ON dep.employee_id = emp.employee_id;
